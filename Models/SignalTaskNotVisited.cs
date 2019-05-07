@@ -19,6 +19,7 @@ namespace IdenfitGuardware.Client.Models
         public float Latitude { get; set; }
 
         public float Longitude { get; set; }
+        public string Employee { get; set; }
 
         public long? Tag { get; set; }
     }
