@@ -67,6 +67,16 @@ namespace IdenfitGuardware.Client.Controllers
                 Message = $"Signal SignalTaskSkipped"
             };
         }
+        [HttpPost("TaskTimeViolation")]
+        public ClientResult Post([FromBody] SignalTaskTimeViolation signal)
+        {
+            return new ClientResult
+            {
+                State = true,
+
+                Message = $"Signal SignalTaskTimeViolation"
+            };
+        }
         [HttpPost("TaskStationTimeViolation")]
         public ClientResult Post([FromBody] SignalTaskStationViolation signal)
         {
