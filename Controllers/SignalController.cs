@@ -217,5 +217,15 @@ namespace IdenfitGuardware.Client.Controllers
                 Message = $"Signal SignalTaskNotVisited"
             };
         }
+        [HttpPost("DeviceBatteryAlarm")]
+        public ClientResult Post([FromBody] SignalDeviceBatteryAlarm signal)
+        {
+            return new ClientResult
+            {
+                State = true,
+
+                Message = $"Signal SignalDeviceBatteryAlarm"
+            };
+        }
     }
 }
