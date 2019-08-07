@@ -227,5 +227,25 @@ namespace IdenfitGuardware.Client.Controllers
                 Message = $"Signal SignalDeviceBatteryAlarm"
             };
         }
+        [HttpPost("AppReport")]
+        public ClientResult Post([FromBody] SignalAppReport signal)
+        {
+            return new ClientResult
+            {
+                State = true,
+
+                Message = $"Signal SignalAppReport"
+            };
+        }
+        [HttpPost("RestartReport")]
+        public ClientResult Post([FromBody] SignalRestartReport signal)
+        {
+            return new ClientResult
+            {
+                State = true,
+
+                Message = $"Signal SignalRestartReport"
+            };
+        }
     }
 }
